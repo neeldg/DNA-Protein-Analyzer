@@ -20,48 +20,32 @@ This Python application provides a graphical user interface (GUI) to analyze DNA
 - Python 3.x
 - [Biopython](https://biopython.org/)
 
-## Usage
+## How It Works
 
-1. **Run the script:**
+When you select a FASTA file, the tool automatically determines whether it is a DNA or protein sequence based on the characters it contains:
 
-```bash
-python sequence_analysis_tool.py
+- **DNA Sequences:**
+  - Calculates GC content (percentage of G and C nucleotides)
+  - Estimates melting temperature using the simple formula `2*(A+T) + 4*(G+C)` (2/4 rule)
+  - Reports the frequency of each nucleotide
 
-2. **A window will appear prompting you to select a FASTA file.**
+- **Protein Sequences:**
+  - Calculates molecular weight
+  - Reports the frequency of each amino acid
 
-3. **Once selected, the program will parse and analyze its contents, displaying the results in a scrollable text window.**
-
-## How it works
-
-1. When you select a FASTA file, the tool determines whether it is DNA or protein based on its sequence characters:
-
-**DNA Sequences:**
-
-    Calculates GC content (percentage of G and C nucleotides)
-
-    Estimates melting temperature using the 2/4 rule: 2*(A+T) + 4*(G+C)
-  
-    Reports nucleotide frequencies
-
-**Protein Sequences:**
-
-    Calculates molecular weight
-
-    Reports amino acid frequencies
-
-    If the sequence cannot be clearly classified or contains ambiguous characters, the program will display a message indicating this.
+If the sequence cannot be clearly classified or contains ambiguous characters, the program will display a warning message.
 
 ## Limitations
 
-1. The melting temperature calculation uses a basic approximation and should only be used for rough estimates.
+- The melting temperature calculation uses a simple approximation and should only be used for rough estimates, not for experimental design.
+- Only standard unambiguous DNA and protein sequences are supported.
+- Sequences with ambiguous or non-standard characters may not be analyzed correctly.
 
-2. Only standard unambiguous DNA or protein sequences are supported.
+## Usage
 
-3. Sequences containing ambiguous or non-standard letters may not be classified correctly.
+1. Run the script:
 
-## Installation
-
-Install Biopython using pip:
-
-```bash
-pip install biopython
+   ```bash
+   python sequence_analysis_tool.py
+2. A window will appear prompting you to select a FASTA file.
+3. Once selected, the program will parse and analyze its contents, displaying the results in a scrollable text window.
