@@ -20,6 +20,15 @@ This Python application provides a graphical user interface (GUI) to analyze DNA
 - Python 3.x
 - [Biopython](https://biopython.org/)
 
+## Usage
+
+1. Run the script:
+
+   ```bash
+   python sequence_analysis_tool.py
+2. A window will appear prompting you to select a FASTA file.
+3. Once selected, the program will parse and analyze its contents, displaying the results in a scrollable text window.
+
 ## How It Works
 
 When you select a FASTA file, the tool automatically determines whether it is a DNA or protein sequence based on the characters it contains:
@@ -40,12 +49,3 @@ If the sequence cannot be clearly classified or contains ambiguous characters, t
 - The melting temperature calculation uses a simple approximation and should only be used for rough estimates, not for experimental design.
 - Only standard unambiguous DNA and protein sequences are supported.
 - Sequences with ambiguous or non-standard characters may not be analyzed correctly.
-
-## Usage
-
-1. Run the script:
-
-   ```bash
-   python sequence_analysis_tool.py
-2. A window will appear prompting you to select a FASTA file.
-3. Once selected, the program will parse and analyze its contents, displaying the results in a scrollable text window.
