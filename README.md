@@ -20,13 +20,6 @@ This Python application provides a graphical user interface (GUI) to analyze DNA
 - Python 3.x
 - [Biopython](https://biopython.org/)
 
-## Installation
-
-Install Biopython using pip:
-
-```bash
-pip install biopython
-
 ## Usage
 
 1. **Run the script:**
@@ -65,3 +58,10 @@ python sequence_analysis_tool.py
 2. Only standard unambiguous DNA or protein sequences are supported.
 
 3. Sequences containing ambiguous or non-standard letters may not be classified correctly.
+
+## Installation
+
+Install Biopython using pip:
+
+```bash
+pip install biopython
